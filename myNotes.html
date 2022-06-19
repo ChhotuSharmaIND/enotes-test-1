@@ -1,0 +1,569 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!--[icons]-->
+	<link rel="stylesheet" href="icon/icofont/icofont.min.css">
+	<!--	------------------>
+
+	<!-- Bootstrap CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/cssMyNotes.css">
+
+
+	<title>my-Notes</title>
+</head>
+
+<!--<body style="background-image: url(img/laptop_black.jpg)">-->
+
+<body class="bg-color">
+
+
+	<!--*****************************(Navbar)**********************-->
+	<div class="container-fluid p-0 bg-color sticky-top">
+		<nav class="navbar  navbar-expand-lg navbar-dark shadow-5-strong  p-0 ">
+			<div class="container-fluid  ">
+
+				<!--			-----------[mobile profile icon dropdown]---------->
+				<div class="dropdown col-auto d-block d-lg-none ">
+					<a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle " id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+						<img src="img/mashaAndBear.png" alt="" width="32" height="32" class="rounded-circle me-2 ">
+					</a>
+					<ul class="dropdown-menu dropdown-menu-dark  dropdown-menu-lg-end text-small shadow " aria-labelledby="dropdownUser1">
+						<li><a class="dropdown-item" href="#">New project...</a></li>
+						<li><a class="dropdown-item" href="#">Settings</a></li>
+						<li><a class="dropdown-item" href="#">Profile</a></li>
+						<li>
+							<hr class="dropdown-divider">
+						</li>
+						<li><a class="dropdown-item" href="#">Sign out</a></li>
+					</ul>
+				</div>
+
+
+				<!--			-----------[End mobile profile icon dropdown]---------->
+
+
+
+				<a class="navbar-brand   p-0 fs-1" href="index.html">e-notes</a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse border-start " id="navbarSupportedContent">
+					<div class="container ">
+						<div class="row align-items-center ">
+							<div class="col-lg-3 ">
+								<ul class="navbar-nav  mb-2 mb-lg-0 ">
+									<!--
+								<li class="nav-item">
+									<a class="nav-link   " aria-current="page" href="home.html">Home</a>
+								</li>
+-->
+									<li class="nav-item">
+										<a class="nav-link active" href="myNotes.html">MyNotes</a>
+									</li>
+
+									<li class="nav-item">
+										<a class="nav-link " href="branch.html">Branch</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link " href="branch.html">Messages</a>
+									</li>
+									<!--								----------(dropdown)---------------->
+									<!--
+								<li class="nav-item dropdown">
+									<a class="nav-link dropdown-toggle fs-5" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+										Dropdown
+									</a>
+									<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+										<li><a class="dropdown-item" href="#">Action</a></li>
+										<li><a class="dropdown-item" href="#">Another action</a></li>
+										<li>
+											<hr class="dropdown-divider">
+										</li>
+										<li><a class="dropdown-item" href="#">Something else here</a></li>
+									</ul>
+								</li>
+<!--								----------(END dropdown)---------------->
+									-->
+
+								</ul>
+							</div>
+							<!--						-----[large screen search box]------->
+							<div class="col-lg-6 d-none d-lg-block  ">
+								<form class="d-flex ">
+									<input class="form-control me-2 transparent-input " type="search" placeholder="Search" aria-label="Search">
+									<!--					<button class="btn btn-outline-light" type="submit">Search</button>-->
+									<span class="icon  d-flex fs-3 mt-auto mb-auto border-start border-end">
+
+										<ion-icon name="search-outline" class="m-0 p-0 text-light "></ion-icon>
+									</span>
+								</form>
+							</div>
+
+							<!--						-----[End large screen search box]------->
+							<!--						*****[Large screen profile icon]****-->
+
+							<div class="dropdown col-auto ml-auto ml-auto d-none d-lg-block ">
+								<a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle  " id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+									<img src="img/mashaAndBear.png" alt="" width="32" height="32" class="rounded-circle me-2  ">
+								</a>
+								<ul class="dropdown-menu dropdown-menu-dark  dropdown-menu-lg-end text-small shadow " aria-labelledby="dropdownUser1">
+									<li><a class="dropdown-item" href="#">New project...</a></li>
+									<li><a class="dropdown-item" href="#">Settings</a></li>
+									<li><a class="dropdown-item" href="#">Profile</a></li>
+									<li>
+										<hr class="dropdown-divider">
+									</li>
+									<li><a class="dropdown-item" href="#">Sign out</a></li>
+								</ul>
+							</div>
+
+
+
+							<!--						[End Large screen proflie icon]-->
+						</div>
+					</div>
+				</div>
+			</div>
+		</nav>
+		<hr class="text-white mt-0 mb-0">
+	</div>
+
+	<!--		**********(Mobile screen search box[out of navbar])*************-->
+
+
+	<div class="container mb-3 mt-3 d-block d-lg-none">
+
+		<div class="row">
+			<div class="col    ">
+				<form class="d-flex ">
+					<input class="form-control me-2 transparent-input " type="search" placeholder="Search" aria-label="Search">
+					<!--					<button class="btn btn-outline-light" type="submit">Search</button>-->
+					<span class="icon  d-flex fs-3 mt-auto mb-auto border-start border-end">
+
+						<ion-icon name="search-outline" class="m-0 p-0 text-light"></ion-icon>
+					</span>
+				</form>
+			</div>
+		</div>
+
+	</div>
+
+	<hr class="text-light d-block d-lg-none">
+
+	<!--	**********(END mobile screen search box [out of nevbar])*********-->
+	<!--*****************************(End Navbar)********************-->
+
+
+	<!--	***********************(Sidebar)**********-->
+	<div class="container-fluid    ">
+		<div class="row  ">
+		
+		
+		
+<!--		---------(new)----------->
+
+	<div class="col-md-3 text-white   border-wnd ">
+		<div class="container-fluid    top-sticky  py-3">
+
+
+					<div><a href="" class="text-white  text-decoration-none "><i class="icofont-simple-left  text-white  "></i>Back</a>
+					</div>
+					<div class="contaner my-4 ">
+						<i class="icofont-book-alt icofont-4x text-white border"> </i>
+						<h2 class="text-white my-3">All notes</h2>
+						<hr class="text-white">
+					</div>
+				<div class="container">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam similique ab architecto, cupiditate. Delectus, provident veritatis culpa cum. Harum saepe enim, tenetur provident. Ex nobis ea nemo laborum voluptates temporibus.
+				</div>
+
+				</div>
+	</div>
+	
+	<!--		---------(END new)------->
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+			<!--	***********************(END Sidebar)**********-->
+
+		<div class="col-md-9  ">
+		
+		
+		
+		
+		<div class="row  justify-content-end top-sticky bg-color">
+<!--[thit .col-auto.mb-2.mt-2 gives margin betwen uper line and lower line]-->
+			<div class="col-auto  text-white mb-2 mt-2"> 
+			
+			
+				<button type="button" class="btn btn-primary">Filter</button>
+				<button type="button" class="btn btn-primary">Upload</button>
+				
+				
+				
+			</div>
+<!--[ es hr ka .mb-0  line ke bad hi data ko jane jane(display) deta hai ]-->
+			<hr class="text-white mb-0">
+		</div>
+		
+		
+		
+		
+		
+		
+		
+		
+		<div class="row ">
+			<div class="col p-0">
+				
+				<table class="table text-white">
+							<thead>
+								<tr>
+									<th class="col-1" scope="col">#</th>
+									<th class="col-5" scope="col">File</th>
+									<th class="col-3" scope="col">Name</th>
+									<th class="col-2" scope="col">Date</th>
+									<th class="col-1" scope="col">Download</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th scope="row">1</th>
+									<td>Mark</td>
+									<td>Otto</td>
+									<td>@mdo</td>
+									<td>@mdo</td>
+								</tr>
+								<tr>
+									<th scope="row">2</th>
+									<td>Jacob</td>
+									<td>Thornton</td>
+									<td>@fat</td>
+									<td>@fat</td>
+								</tr>
+								<tr>
+									<th scope="row">3</th>
+									<td colspan="2">Larry the Bird</td>
+									<td>@twitter</td>
+									<td>@twitter</td>
+								</tr>
+								<tr>
+									<th scope="row">1</th>
+									<td>Mark</td>
+									<td>Otto</td>
+									<td>@mdo</td>
+									<td>@mdo</td>
+								</tr>
+								<tr>
+									<th scope="row">2</th>
+									<td>Jacob</td>
+									<td>Thornton</td>
+									<td>@fat</td>
+									<td>@fat</td>
+								</tr>
+								<tr>
+									<th scope="row">3</th>
+									<td colspan="2">Larry the Bird</td>
+									<td>@twitter</td>
+									<td>@twitter</td>
+								</tr>
+								<tr>
+									<th scope="row">1</th>
+									<td>Mark</td>
+									<td>Otto</td>
+									<td>@mdo</td>
+									<td>@mdo</td>
+								</tr>
+								<tr>
+									<th scope="row">2</th>
+									<td>Jacob</td>
+									<td>Thornton</td>
+									<td>@fat</td>
+									<td>@fat</td>
+								</tr>
+								<tr>
+									<th scope="row">3</th>
+									<td colspan="2">Larry the Bird</td>
+									<td>@twitter</td>
+									<td>@twitter</td>
+								</tr>
+								<tr>
+									<th scope="row">1</th>
+									<td>Mark</td>
+									<td>Otto</td>
+									<td>@mdo</td>
+									<td>@mdo</td>
+								</tr>
+								<tr>
+									<th scope="row">2</th>
+									<td>Jacob</td>
+									<td>Thornton</td>
+									<td>@fat</td>
+									<td>@fat</td>
+								</tr>
+								<tr>
+									<th scope="row">3</th>
+									<td colspan="2">Larry the Bird</td>
+									<td>@twitter</td>
+									<td>@twitter</td>
+								</tr>
+								<tr>
+									<th scope="row">1</th>
+									<td>Mark</td>
+									<td>Otto</td>
+									<td>@mdo</td>
+									<td>@mdo</td>
+								</tr>
+								<tr>
+									<th scope="row">2</th>
+									<td>Jacob</td>
+									<td>Thornton</td>
+									<td>@fat</td>
+									<td>@fat</td>
+								</tr>
+								<tr>
+									<th scope="row">3</th>
+									<td colspan="2">Larry the Bird</td>
+									<td>@twitter</td>
+									<td>@twitter</td>
+								</tr>
+								<tr>
+									<th scope="row">1</th>
+									<td>Mark</td>
+									<td>Otto</td>
+									<td>@mdo</td>
+									<td>@mdo</td>
+								</tr>
+								<tr>
+									<th scope="row">2</th>
+									<td>Jacob</td>
+									<td>Thornton</td>
+									<td>@fat</td>
+									<td>@fat</td>
+								</tr>
+								<tr>
+									<th scope="row">3</th>
+									<td colspan="2">Larry the Bird</td>
+									<td>@twitter</td>
+									<td>@twitter</td>
+								</tr>
+								<tr>
+									<th scope="row">1</th>
+									<td>Mark</td>
+									<td>Otto</td>
+									<td>@mdo</td>
+									<td>@mdo</td>
+								</tr>
+								<tr>
+									<th scope="row">2</th>
+									<td>Jacob</td>
+									<td>Thornton</td>
+									<td>@fat</td>
+									<td>@fat</td>
+								</tr>
+								<tr>
+									<th scope="row">3</th>
+									<td colspan="2">Larry the Bird</td>
+									<td>@twitter</td>
+									<td>@twitter</td>
+								</tr>
+								<tr>
+									<th scope="row">1</th>
+									<td>Mark</td>
+									<td>Otto</td>
+									<td>@mdo</td>
+									<td>@mdo</td>
+								</tr>
+								<tr>
+									<th scope="row">2</th>
+									<td>Jacob</td>
+									<td>Thornton</td>
+									<td>@fat</td>
+									<td>@fat</td>
+								</tr>
+								<tr>
+									<th scope="row">3</th>
+									<td colspan="2">Larry the Bird</td>
+									<td>@twitter</td>
+									<td>@twitter</td>
+								</tr>
+								<tr>
+									<th scope="row">1</th>
+									<td>Mark</td>
+									<td>Otto</td>
+									<td>@mdo</td>
+									<td>@mdo</td>
+								</tr>
+								<tr>
+									<th scope="row">2</th>
+									<td>Jacob</td>
+									<td>Thornton</td>
+									<td>@fat</td>
+									<td>@fat</td>
+								</tr>
+								<tr>
+									<th scope="row">3</th>
+									<td colspan="2">Larry the Bird</td>
+									<td>@twitter</td>
+									<td>@twitter</td>
+								</tr>
+								<tr>
+									<th scope="row">1</th>
+									<td>Mark</td>
+									<td>Otto</td>
+									<td>@mdo</td>
+									<td>@mdo</td>
+								</tr>
+								<tr>
+									<th scope="row">2</th>
+									<td>Jacob</td>
+									<td>Thornton</td>
+									<td>@fat</td>
+									<td>@fat</td>
+								</tr>
+								<tr>
+									<th scope="row">3</th>
+									<td colspan="2">Larry the Bird</td>
+									<td>@twitter</td>
+									<td>@twitter</td>
+								</tr>
+								<tr>
+									<th scope="row">1</th>
+									<td>Mark</td>
+									<td>Otto</td>
+									<td>@mdo</td>
+									<td>@mdo</td>
+								</tr>
+								<tr>
+									<th scope="row">2</th>
+									<td>Jacob</td>
+									<td>Thornton</td>
+									<td>@fat</td>
+									<td>@fat</td>
+								</tr>
+								<tr>
+									<th scope="row">3</th>
+									<td colspan="2">Larry the Bird</td>
+									<td>@twitter</td>
+									<td>@twitter</td>
+								</tr>
+								<tr>
+									<th scope="row">1</th>
+									<td>Mark</td>
+									<td>Otto</td>
+									<td>@mdo</td>
+									<td>@mdo</td>
+								</tr>
+								<tr>
+									<th scope="row">2</th>
+									<td>Jacob</td>
+									<td>Thornton</td>
+									<td>@fat</td>
+									<td>@fat</td>
+								</tr>
+								<tr>
+									<th scope="row">3</th>
+									<td colspan="2">Larry the Bird</td>
+									<td>@twitter</td>
+									<td>@twitter</td>
+								</tr>
+								<tr>
+									<th scope="row">1</th>
+									<td>Mark</td>
+									<td>Otto</td>
+									<td>@mdo</td>
+									<td>@mdo</td>
+								</tr>
+								<tr>
+									<th scope="row">2</th>
+									<td>Jacob</td>
+									<td>Thornton</td>
+									<td>@fat</td>
+									<td>@fat</td>
+								</tr>
+								<tr>
+									<th scope="row">3</th>
+									<td colspan="2">Larry the Bird</td>
+									<td>@twitter</td>
+									<td>@twitter</td>
+								</tr>
+								<tr>
+									<th scope="row">1</th>
+									<td>Mark</td>
+									<td>Otto</td>
+									<td>@mdo</td>
+									<td>@mdo</td>
+								</tr>
+								<tr>
+									<th scope="row">2</th>
+									<td>Jacob</td>
+									<td>Thornton</td>
+									<td>@fat</td>
+									<td>@fat</td>
+								</tr>
+								<tr>
+									<th scope="row">9</th>
+									<td colspan="2">Larry the Bird</td>
+									<td>@twitter</td>
+									<td>@twitter</td>
+								</tr>
+
+
+							</tbody>
+						</table>
+				
+				
+			</div>
+		</div>
+		
+		
+		
+			<!--*************(notes nav bar)**************-->
+			</div>
+		</div>
+
+	</div>
+	<!-------------------------( END In table )----------------->
+
+
+
+
+	<!--**************(END notes list)************-->
+
+
+
+	<!--!!!!!!!!!!!!!!!!!!!!!!!!!!!(body)!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
+	<!-- Optional JavaScript; choose one of the two! -->
+
+	<!-- Option 1: Bootstrap Bundle with Popper -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+	<!-- Option 2: Separate Popper and Bootstrap JS -->
+	<!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+</body>
+
+<!-------------------->
+<!--[ionicons]-->
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<!------------------->
+
+</html>

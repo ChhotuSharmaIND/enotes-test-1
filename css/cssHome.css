@@ -1,0 +1,46 @@
+.bg-color{
+	background-color:rgb(27, 34, 59);
+}
+.bg-footer{
+	background-color: rgb(155, 159, 171);
+}
+.bg-blue-light{
+	background-color: rgb(114, 126, 168);
+}
+.img-size{
+	height: 350px;
+	width: 350px;
+}
+.border-left{
+	border-left: 1px solid white;
+	
+	
+}
+.border-buttom{
+	border-bottom: 1px solid white;
+}
+.ml-auto{
+	margin-left: auto;
+}
+.dropdown-left-manual {
+  right: 0;
+  left: auto;
+  padding-left: 1px;
+  padding-right: 1px;
+}
+/*[nav bottom margin]*/
+
+.sharma-100{
+	margin-bottom: 100px;
+}
+.m-top{
+	margin-top: 60px;
+}
+m-bottom-n{
+	margin-bottom: -65px;
+}
+.brd-1{
+  
+}
+
+
